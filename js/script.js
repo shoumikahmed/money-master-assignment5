@@ -23,4 +23,7 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
 
 document.getElementById('save-btn').addEventListener('click', function () {
     const saveInput = document.getElementById('save-input')
+    const saveMoney = parseFloat(saveInput.value)
+    const incomeMoney = document.getElementById('income')
+    const income = parseFloat(incomeMoney.value)
 })
