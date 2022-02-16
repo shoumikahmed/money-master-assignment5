@@ -26,4 +26,12 @@ document.getElementById('save-btn').addEventListener('click', function () {
     const saveMoney = parseFloat(saveInput.value)
     const incomeMoney = document.getElementById('income')
     const income = parseFloat(incomeMoney.value)
+    // get save money per percentage
+    const savingAmount = document.getElementById('saving-amount')
+    savingAmount.innerText = (income * saveMoney) / 100
+
+    const totalBalance = document.getElementById('balance')
+
+    const remainingBalance = document.getElementById('remaining-balance')
+    remainingBalance.innerText = totalBalance.innerText - savingAmount.innerText
 })
