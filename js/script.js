@@ -60,6 +60,7 @@ document.getElementById('save-btn').addEventListener('click', function () {
             return alert('you have not enough money to save')
         }
         else {
+            // get remaining balance
             const remainingBalance = document.getElementById('remaining-balance')
             remainingBalance.innerText = totalAmount - savingAmountNumber
         }
