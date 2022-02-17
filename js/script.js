@@ -32,6 +32,7 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
         return alert('please input valid amount of money in number format income')
     }
     else {
+        // get total expense value
         const newExpenseTotal = foodPrice + rentPrice + clothesPrice
         totalExpense.innerText = newExpenseTotal
 
@@ -41,7 +42,6 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
         }
         else {
             // get total balance
-
             const totalBalance = document.getElementById('balance')
             totalBalance.innerText = income - newExpenseTotal
         }
@@ -57,18 +57,17 @@ document.getElementById('save-btn').addEventListener('click', function () {
 
     const totalBalance = document.getElementById('balance')
     const totalAmount = parseFloat(totalBalance.innerText)
-    // get save money per percentage
+    // error handling for bonus mark
     if (isNaN(saveMoney) || saveMoney < 0) {
         return alert('please input valid amount of money in number format in save-input')
     }
     else {
+        // get save money for percentage
         const savingAmount = document.getElementById('saving-amount')
         savingAmount.innerText = (income * saveMoney) / 100
-
-        // const totalBalance = document.getElementById('balance')
         // get remainig balance
-
         const savingAmountNumber = parseFloat(savingAmount.innerText)
+        // error handling for bonus mark
         if (savingAmountNumber > totalAmount) {
             return alert('you have not enough money to save')
         }
