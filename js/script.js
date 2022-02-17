@@ -1,5 +1,3 @@
-
-
 // common function for calling parameter
 function getInputValue(inputId) {
     const allGoodsCost = document.getElementById(inputId)
@@ -8,15 +6,10 @@ function getInputValue(inputId) {
 }
 
 document.getElementById('calculate-btn').addEventListener('click', function () {
-
     const foodPrice = getInputValue('food-cost')
-
     const rentPrice = getInputValue('rent-cost')
-
     const clothesPrice = getInputValue('clothes-cost')
-
     const income = getInputValue('income')
-
     const totalExpense = document.getElementById('total-expense')
     // error handling ///
     if (isNaN(foodPrice) || foodPrice < 0) {
@@ -35,7 +28,6 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
         // get total expense value
         const newExpenseTotal = foodPrice + rentPrice + clothesPrice
         totalExpense.innerText = newExpenseTotal
-
         const totalExpenseNumber = parseFloat(totalExpense.innerText)
         if (totalExpenseNumber > income) {
             return alert('you have not enough money to expense')
@@ -45,16 +37,12 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
             const totalBalance = document.getElementById('balance')
             totalBalance.innerText = income - newExpenseTotal
         }
-
     }
 })
 
 document.getElementById('save-btn').addEventListener('click', function () {
-
     const saveMoney = getInputValue('save-input')
-
     const income = getInputValue('income')
-
     const totalBalance = document.getElementById('balance')
     const totalAmount = parseFloat(totalBalance.innerText)
     // error handling for bonus mark
@@ -74,7 +62,6 @@ document.getElementById('save-btn').addEventListener('click', function () {
         else {
             const remainingBalance = document.getElementById('remaining-balance')
             remainingBalance.innerText = totalAmount - savingAmountNumber
-
         }
     }
 })
