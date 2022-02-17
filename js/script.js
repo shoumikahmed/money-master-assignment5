@@ -1,4 +1,5 @@
 
+
 // common function for calling parameter
 function getInputValue(inputId) {
     const allGoodsCost = document.getElementById(inputId)
@@ -74,8 +75,8 @@ document.getElementById('save-btn').addEventListener('click', function () {
         else {
             const remainingBalance = document.getElementById('remaining-balance')
             remainingBalance.innerText = totalAmount - savingAmountNumber
+
         }
     }
-
 })
 
